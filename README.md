@@ -8,7 +8,7 @@ cnx = connection.MySQLConnection(user='mysql1', password='mysql',host='192.168.0
 cursor = cnx.cursor()
 
 
-headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2.1 Safari/605.1.15'}
+headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36'}
 urls = ["https://bina.az/alqi-satqi?page={}".format(i) for i in range(1, 2)]
 
 for url in urls:
@@ -94,7 +94,6 @@ try:
 
     products['phone'].append(phone_text)
 
-    print(phone_text)
 except requests.exceptions.RequestException as e:
     print("Error making the request:", e)
 
